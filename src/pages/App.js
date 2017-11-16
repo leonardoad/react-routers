@@ -1,16 +1,17 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 export default class App extends React.Component {
     render(){
         return (
         	  <div>
-	        	  	<nav className="navbar ">
-						<div className="tabs">
-						  <ul>
-							    <li><a href="#/" className="navbar-item">Home</a> </li>
-							    <li><a href="#/courses" className="navbar-item">Courses</a> </li>
-								<li><a href="#/about" className="navbar-item">About</a> </li>
-						  </ul>
+	        	  	<nav className="navbar has-shadow">
+						<div className="navbar-menu">
+						  <div className="navbar-start">
+							    <a href="#/" className="navbar-item">Home</a> 
+							     <Link to="/courses" className="navbar-item is-tab"  activeClassName="is-active">Courses</Link> 
+							     <Link to="/about"   className="navbar-item is-tab"  activeClassName="is-active" >About</Link> 
+						  </div>
 						</div>
 					</nav>
 
